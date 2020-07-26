@@ -4,11 +4,7 @@
   gather_facts: no
   ignore_errors: yes
   serial: 1
-  vars:
-    creds:
-      host: "{{ host }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
+
   tasks:
     - name: Create root directory if don't exist
       file:
@@ -28,7 +24,6 @@
 
     - name: Execute IOS commands
       ios_command:
-        provider: "{{ creds }}"
         commands: "{{ item  }}"
       register: commands_output
       with_items:
