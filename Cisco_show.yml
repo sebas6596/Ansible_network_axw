@@ -1,0 +1,13 @@
+---
+
+- hosts: "{{ sw }}"
+  gather_facts: no
+  ignore_errors: yes
+  serial: 1
+
+  tasks:
+
+    - name: Execute IOS commands
+      ios_command:
+         commands: "{{ command_show }}"
+      register: commands_output
