@@ -1,0 +1,14 @@
+---
+
+- hosts: "{{ sw }}"
+  gather_facts: no
+  ignore_errors: yes
+  serial: 1
+
+  tasks:
+
+    - name: Execute IOS commands
+      ios_config:
+         lines: ntp server "{{ serverntp }}"
+      register: commands_output
+
