@@ -9,6 +9,6 @@
 
     - name: Execute IOS commands
       ios_config:
-         lines: ntp server "{{ serverntp }}"
+         lines: "{{ command_config }}"
       register: commands_output
 
