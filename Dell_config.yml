@@ -4,9 +4,8 @@
   connection: network_cli
   gather_facts: no
 
-- tasks:
-
-    name: "Execute DellOS commands"
+  tasks:
+  - name: "Execute DellOS commands"
     dellos6_config:
-    commands: ["{{ command_config }}"]
+      commands: ["{{ command_config }}"]
     register: set_hostname
