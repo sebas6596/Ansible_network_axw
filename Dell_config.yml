@@ -6,7 +6,7 @@
 
 - tasks:
 
-  - name: "Execute DellOS commands"
+    name: "Execute DellOS commands"
     dellos6_config:
     commands: ["{{ command_config }}"]
     register: set_hostname
