@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-    - name: Execute DellOS commands
+  - name: Execute DellOS commands
       dellos6_config:
-      commands: ["{{ command_config }}"]
+        commands: ["{{ command_config }}"]
       register: commands_output
