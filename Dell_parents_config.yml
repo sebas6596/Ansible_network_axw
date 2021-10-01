@@ -1,11 +1,11 @@
 ---
 
- hosts: "{{ sw }}"
+- hosts: "{{ sw }}"
   connection: network_cli
   gather_facts: no
 
   tasks:
-  os6_config:
+  - os6_config:
     lines:
       - level warnings
     parents: ['logging 192.168.10.73']
