@@ -5,8 +5,9 @@
   gather_facts: no
 
   tasks:
-  - name: "Execute DellOS commands"
-    dellos6_config:
-      commands: ["{{ command_config }}"]
-      parents: ["{{ parents }}"]
+- os6_config:
+    lines:
+      - level warnings
+    parents: ['logging 192.168.10.73']
+    match: exact
     register: commands_output
