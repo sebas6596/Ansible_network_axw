@@ -7,8 +7,8 @@
   tasks:
   - name: "Execute DellOS commands"
     dellos6_config:
-      parents: logging 192.168.10.73
+      parents: "{{ parents }}"
       lines:
-        - level errors
+        - "{{ command_config }}"
         
     register: commands_output
