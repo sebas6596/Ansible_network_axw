@@ -8,5 +8,7 @@
   - name: "Execute DellOS commands"
     dellos6_config:
       parents: logging 192.168.10.73
-      commands: ["{{ command_config }}"]
+      lines:
+        - level warnings
+        
     register: commands_output
