@@ -1,5 +1,4 @@
 ---
-
 dellos_logging:
   logging:
    - ip : 10.62.1.20
