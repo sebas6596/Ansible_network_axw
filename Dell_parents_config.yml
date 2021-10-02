@@ -4,6 +4,6 @@ dellos_logging:
   logging:
    - ip : 10.62.1.20
      state: present
- console_level: 7
+     console_level: 7
  trap_level: 5   
     register: commands_output
