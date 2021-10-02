@@ -4,7 +4,7 @@
   connection: network_cli
   gather_facts: no
 
-  tasks:
+- tasks:
   os6_config:
     lines:
       - level warnings
