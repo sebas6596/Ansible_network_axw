@@ -9,6 +9,6 @@
     dellos6_config:
       parents: logging 192.168.10.73
       lines:
-        - level warnings
+        - level errors
         
     register: commands_output
