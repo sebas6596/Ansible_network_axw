@@ -7,8 +7,8 @@
   tasks:
   - name: "Execute DellOS commands"
     dellos6_config:
-      parents: ["{{ parents }}"]
+      parents: ["{{ command_config }}"]
       lines:
-        - "{{ command_config }}"
+        - "{{ parents }}"
         
     register: commands_output
