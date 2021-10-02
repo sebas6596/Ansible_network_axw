@@ -5,7 +5,7 @@
   gather_facts: no
 
 - tasks:
-  os6_config:
+  dellos6_config:
     lines:
       - level warnings
     parents: ['logging 192.168.10.73']
