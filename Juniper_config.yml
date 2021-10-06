@@ -1,6 +1,6 @@
 ---
 - name: "Configure Device" 
-  hosts: switch
+  hosts: "{{ sw }}"
   roles:
     - Juniper.junos
   connection: local
