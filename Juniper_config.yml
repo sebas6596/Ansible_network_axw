@@ -8,4 +8,5 @@
     - name: Execute JunOS commands
       juniper_junos_config:
          lines: "{{ command_config }}"
+         check_commit: yes
       register: commands_output
