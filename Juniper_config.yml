@@ -1,8 +1,6 @@
 ---
 - name: "Configure Device" 
   hosts: "{{ sw }}"
-  roles:
-    - Juniper.junos
   connection: local
   gather_facts: no
 
