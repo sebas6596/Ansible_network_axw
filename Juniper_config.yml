@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-     - name: "Configure op script"
+    - name: "Configure op script"
        juniper_junos_config:
         config_mode: "private"
         load: "set"
