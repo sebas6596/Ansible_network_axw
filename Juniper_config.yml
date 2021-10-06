@@ -5,8 +5,7 @@
   ignore_errors: yes
   connection: network_cli
 
-  tasks:
-  
+  tasks: 
     - name: Execute JunOS commands
       juniper_junos_config:
          lines: 
