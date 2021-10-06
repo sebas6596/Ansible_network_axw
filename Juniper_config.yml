@@ -17,8 +17,6 @@
     - name: "Print the config changes"
       debug:
         var: response.diff_lines
-    - name: confirm a previous commit
-        junos_config:
-        confirm_commit: yes
+
 
 
