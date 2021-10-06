@@ -9,6 +9,6 @@
        juniper_junos_config
          lines
          - "{{ command_config }}"
-       register: commands_output
+       register commands_output
 
 
