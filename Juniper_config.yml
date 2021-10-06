@@ -1,13 +1,17 @@
 ---
-
-- hosts: "{{ sw }}"
+- name: Test juniper_junos_config module
+  hosts: "{{ sw }}"
+  connection: local
   gather_facts: no
-  ignore_errors: yes
-
+  collections:
+    - juniper.device
   tasks:
-  
-   - name: Execute JunOS commands
+#################
+    - name: Append .foo to the hostname using private config mode.
       juniper_junos_config:
-         lines: 
-         - "{{ command_config }}"
-      register: commands_output
+        config_mode: 'private'
+        load: 'merge'
+        lines:
+          - "{{ command_config }}"
+        comment: "Append .foo to the hostname"
+      ignore_errors: True
