@@ -6,7 +6,7 @@
 
   tasks:
      - name: "Configure op script"
-      juniper_junos_config:
+       juniper_junos_config:
         config_mode: "private"
         load: "set"
         lines:
