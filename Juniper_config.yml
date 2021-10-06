@@ -3,7 +3,6 @@
 - hosts: "{{ sw }}"
   gather_facts: no
   ignore_errors: yes
-  connection: local
 
   tasks:
     - name: Execute JunOS commands
