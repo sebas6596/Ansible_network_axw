@@ -1,15 +1,24 @@
 ---
-
-- hosts: "{{ sw }}"
+- name: "Configure Device" 
+  hosts: switch
+  roles:
+    - Juniper.junos
+  connection: local
   gather_facts: no
-  ignore_errors: yes
-  connection: network_cli
 
-  tasks: 
-    - name: Execute JunOS commands
+  tasks:
+    - name: "Configure op script"
       juniper_junos_config:
-         lines: 
-         - "{{ command_config }}"
-      register: commands_output
+        config_mode: "private"
+        load: "set"
+        lines:
+          - "set system time-zone America/Bogota"
+      register: response
+    - name: "Print the config changes"
+      debug:
+        var: response.diff_lines
+    - name: confirm a previous commit
+        junos_config:
+        confirm_commit: yes
 
 
