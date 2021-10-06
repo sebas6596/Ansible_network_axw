@@ -1,15 +1,14 @@
 ---
-- name: "Configure Device" 
-  hosts: "{{ sw }}"
-  connection: local
-  gather_facts: no
 
-  tasks:
-    - name: "Configure op script"
-       juniper_junos_config:
-        config_mode: "private"
-        load: "set"
-        lines:
-          - "set system time-zone America/Bogota"
+- hosts: "{{ sw }}"
+  gather_facts: no
+  ignore_errors: yes
+
+  tasks: 
+    - name: Execute JunOS commands
+      juniper_junos_config:
+         lines: 
+         - "{{ command_config }}"
+      register: commands_output
 
 
