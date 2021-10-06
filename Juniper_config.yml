@@ -6,7 +6,7 @@
 
   tasks: 
      - name: Execute JunOS commands
-       juniper_junos_config:
+       juniper_junos_config
          lines: 
          - "{{ command_config }}"
        register: commands_output
