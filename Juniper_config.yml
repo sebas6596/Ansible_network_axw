@@ -5,7 +5,7 @@
   ignore_errors: yes
 
   tasks: 
-     - name: Execute JunOS commands
+    - name: Execute JunOS commands
        juniper_junos_config
          lines: 
          - "{{ command_config }}"
