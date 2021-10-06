@@ -7,8 +7,8 @@
     - juniper.device
   tasks:
 #################
-    - name: Append .foo to the hostname using private config mode.
-      juniper_junos_config:
+  - name: Append .foo to the hostname using private config mode.
+      junipernetworks.junos.junos_config:
         config_mode: 'private'
         load: 'merge'
         lines:
