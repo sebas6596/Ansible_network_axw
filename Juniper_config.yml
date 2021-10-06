@@ -11,6 +11,5 @@
         load: "set"
         lines:
           - "set system time-zone America/Bogota"
-       register: response
 
 
