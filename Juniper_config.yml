@@ -3,7 +3,8 @@
 - hosts: "{{ sw }}"
   gather_facts: no
   ignore_errors: yes
-  serial: 1
+  roles:
+    - juniper.junos
 
   tasks:
 
