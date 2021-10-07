@@ -3,12 +3,11 @@
 - hosts: "{{ sw }}"
   gather_facts: no
   ignore_errors: yes
-  roles:
-    - Juniper.junos
-    
+  serial: 1
+
   tasks:
-   - name: Execute JunOS commands
-      ios_command:
-         lines: 
-         - "{{ command_config }}"
+
+    - name: Execute IOS commands
+      ios_config:
+         lines: "{{ command_config }}"
       register: commands_output
