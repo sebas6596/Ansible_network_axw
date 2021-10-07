@@ -8,7 +8,7 @@
     
   tasks:
    - name: Execute JunOS commands
-      junos_config:
+      ios_command:
          lines: 
          - "{{ command_config }}"
       register: commands_output
