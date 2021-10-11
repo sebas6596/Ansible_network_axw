@@ -11,6 +11,6 @@
       ios_banner:
         banner: "{{ type }}"
         text: |
-          "{{ banner }}"
+          {{ banner }}
         state: present
       register: commands_output
