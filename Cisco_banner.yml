@@ -9,7 +9,7 @@
 
     - name: Execute IOS commands
       ios_banner:
-        banner: login
+        banner: motd
         text: |
           Junk login banner
             multi (this one with two spaces indentation)
