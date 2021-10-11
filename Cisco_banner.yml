@@ -8,10 +8,12 @@
   tasks:
 
     - name: Execute IOS commands
-      cisco.ios.ios_banner:
-         banner: login
-         text: |
-          this is my login banner
-          that contains a multiline
-          string
+      ios_banner:
+        banner: login
+        text: |
+          Junk login banner
+            multi (this one with two spaces indentation)
+              line (this one with 4 spaces indentation)
+          ! (this one with no indentation at all)
+        state: present
       register: commands_output
