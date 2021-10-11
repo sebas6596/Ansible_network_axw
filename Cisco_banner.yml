@@ -1,5 +1,7 @@
 ---
 
+---
+
 - hosts: "{{ sw }}"
   gather_facts: no
   ignore_errors: yes
@@ -7,11 +9,11 @@
 
   tasks:
 
-    - name: Configure the login banner
+    - name: Execute IOS commands
       cisco.ios.ios_banner:
-        banner: login
-        text: |
-          this is my login banner
-          that contains a multiline
-          string
-        state: present
+         banner: login
+         text: |
+         this is my login banner
+         that contains a multiline
+         string
+      register: commands_output
