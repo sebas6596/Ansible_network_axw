@@ -1,13 +1,17 @@
 ---
 
-- hosts : " {{sw}} "
-  reunir_factos : no
-  ignore_errors : sí
-  de serie : 1
+- hosts: "{{ sw }}"
+  gather_facts: no
+  ignore_errors: yes
+  serial: 1
 
-  tareas :
+  tasks:
 
-    - nombre : 
-      ios_command :
-         comandos : " {{command_show}} "
-      registro : comandos_salida
+    - name: Configure the login banner
+      cisco.ios.ios_banner:
+        banner: login
+        text: |
+          this is my login banner
+          that contains a multiline
+          string
+       state: present
