@@ -14,4 +14,4 @@
           this is my login banner
           that contains a multiline
           string
-       state: present
+        state: present
