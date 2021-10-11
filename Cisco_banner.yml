@@ -9,30 +9,8 @@
 
     - name: Execute IOS commands
       ios_banner:
-        banner: login
+        banner: "{{ type }}"
         text: |
-          ######################################################################
-            ______ _    _
-           |  ____| |  | |  /\        /\              Switch Cisco
-           | |__  | |  | | /  \      /  \
-           |  __| | |  | |/ /\ \    / /\ \  Fundacion Universitaria Area Andina
-           | |    | |__| / ____ \  / ____ \
-           |_|     \____/_/    \_\/_/    \_\         Capa de Acceso
-                    
-          ######################################################################
-          
-          
-          
-          **************************************************************************
-          ELACCESO NO AUTORIZADO A ESTE DISPOSITIVO ESTA PROHIBIDO.
-          Usted debe tener permiso explicito para acceder y/o
-          Configurar este dispositivo. Todas las actividades realizadas
-          en el dispositivo son almacenadas.
-          
-          UNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED.
-          You must have explicit permission to access or
-          Configure this device. All activities performed on this device
-          are logged.
-          ***************************************************************************
+          "{{ banner }}"
         state: present
       register: commands_output
