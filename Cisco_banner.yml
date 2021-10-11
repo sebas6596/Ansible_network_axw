@@ -1,0 +1,13 @@
+---
+
+- hosts : " {{sw}} "
+  reunir_factos : no
+  ignore_errors : sí
+  de serie : 1
+
+  tareas :
+
+    - nombre : 
+      ios_command :
+         comandos : " {{command_show}} "
+      registro : comandos_salida
