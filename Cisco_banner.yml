@@ -11,9 +11,28 @@
       ios_banner:
         banner: motd
         text: |
-          Junk login banner
-            multi (this one with two spaces indentation)
-              line (this one with 4 spaces indentation)
-          ! (this one with no indentation at all)
+          ######################################################################
+            ______ _    _
+           |  ____| |  | |  /\        /\             Switch
+           | |__  | |  | | /  \      /  \
+           |  __| | |  | |/ /\ \    / /\ \  Fundacion Universitaria Area Andina
+           | |    | |__| / ____ \  / ____ \
+           |_|     \____/_/    \_\/_/    \_\
+                    
+          ######################################################################
+          
+          
+          
+          **************************************************************************
+          ELACCESO NO AUTORIZADO A ESTE DISPOSITIVO ESTA PROHIBIDO.
+          Usted debe tener permiso explicito para acceder y/o
+          Configurar este dispositivo. Todas las actividades realizadas
+          en el dispositivo son almacenadas.
+          
+          UNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED.
+          You must have explicit permission to access or
+          Configure this device. All activities performed on this device
+          are logged.
+          ***************************************************************************
         state: present
       register: commands_output
