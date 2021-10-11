@@ -9,7 +9,7 @@
 
     - name: Execute IOS commands
       ios_banner:
-        banner: motd
+        banner: login
         text: |
           ######################################################################
             ______ _    _
